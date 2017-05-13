@@ -1,3 +1,9 @@
-/**
- * Created by petromoldovan on 5/8/17.
- */
+import constants from '../constants';
+
+
+export function testFlight() {
+    return {
+        type: constants.TEXT_ACTION,
+        payload: "works"
+    }
+}

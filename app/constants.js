@@ -1,5 +1,5 @@
 const constants = {
-    //LOAD_BOOKS_ACTION: 'LOAD_BOOKS_ACTION',
+    TEXT_ACTION: 'TEXT_ACTION',
 };
 
 

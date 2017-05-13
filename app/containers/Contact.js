@@ -1,8 +1,7 @@
 import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom'
 
-import {testFlight} from '../actions/state';
-import App from '../components/App';
+import Contact from '../components/Contact';
 
 
 function mapStateToProps(state) {
@@ -10,15 +9,13 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return {
-        testFlight: () => {dispatch(testFlight())}
-    };
+    return {};
 }
 
-const AppCont = connect(
+const ContactCont = connect(
     mapStateToProps,
     mapDispatchToProps
-)(App);
+)(Contact);
 
 
-export default withRouter(AppCont);
+export default withRouter(ContactCont);
