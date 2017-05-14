@@ -1,6 +1,6 @@
 import express from 'express';
 const app = express();
-import Router from './app/router/Router';
+import Router from '../app/router/Router';
 
 
 app.use(express.static("public"))

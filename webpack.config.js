@@ -1,6 +1,6 @@
 module.exports = {
     entry: [
-        './app/client.js'
+        './app/render/client.js'
     ],
     output: {
         path: __dirname + "/public",

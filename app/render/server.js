@@ -1,8 +1,8 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import { StaticRouter, Route, Switch  } from 'react-router-dom';
-import Landing from './containers/Landing';
-import Contact from './containers/Contact';
+import Landing from '../containers/Landing';
+import Contact from '../containers/Contact';
 
 
 export default ({location, context, store}) => {

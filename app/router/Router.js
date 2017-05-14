@@ -1,13 +1,15 @@
 import { resolve } from 'path';
 import { readFile } from 'fs';
-var router = require('express').Router();
+import {Router} from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server'
-import App from '../index';
+import App from '../render/server';
 import configureStore from '../store/configureStore';
 
 
-router.get("*", function(req, res, next) {
+const router = Router();
+
+router.get("*", function(req, res) {
     const initialState = {};
     const store = configureStore(initialState);
     const context = {};

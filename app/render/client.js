@@ -6,9 +6,9 @@ import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
-import coreReducer from './reducers';
-import Landing from './containers/Landing';
-import Contact from './containers/Contact';
+import coreReducer from '../reducers';
+import Landing from '../containers/Landing';
+import Contact from '../containers/Contact';
 
 const loggerMiddleware = createLogger({
     stateTransformer: state => state.toJS()

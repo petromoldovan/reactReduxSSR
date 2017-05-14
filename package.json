@@ -1,10 +1,10 @@
 {
-  "name": "reactreduxstarter",
+  "name": "reactreduxssrstarter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "react-redux ssr starter",
+  "main": "server/index.js",
   "scripts": {
-    "start": "nodemon server.jsx --exec babel-node --presets es2015,stage-2,react"
+    "start": "nodemon server/index.jsx --exec babel-node --presets es2015,stage-2,react"
   },
   "author": "pm",
   "license": "ISC",
@@ -13,21 +13,15 @@
     "babel-loader": "6.2.0",
     "babel-preset-es2015": "6.1.18",
     "babel-preset-react": "6.1.18",
-    "chai": "3.5.0",
-    "chai-jquery": "2.0.0",
-    "jquery": "2.2.1",
-    "jsdom": "8.1.0",
-    "mocha": "2.4.5",
-    "nodemon": "1.11.0",
-    "react-addons-test-utils": "0.14.7"
+    "nodemon": "1.11.0"
   },
   "dependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-env": "^1.4.0",
-    "babel-preset-node6": "^11.0.0",
+    "babel-cli": "6.24.1",
+    "babel-preset-env": "1.4.0",
+    "babel-preset-node6": "11.0.0",
     "babel-preset-stage-1": "6.1.18",
     "babel-register": "6.24.1",
-    "express": "^4.15.2",
+    "express": "4.15.2",
     "immutable": "3.8.1",
     "react": "15.5.4",
     "react-dom": "15.4.2",
