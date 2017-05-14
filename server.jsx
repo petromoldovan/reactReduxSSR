@@ -5,15 +5,19 @@ import React from 'react';
 import { renderToString } from 'react-dom/server'
 //import App from './app/components/App';
 import App from './app/index';
+import configureStore from './app/store/configureStore';
+import template from './app/template';
 
 
 var app = express();
 
-app.use(express.static("/public"));
+
+app.use(express.static("public"))
 
 
-app.get("/", function(req, res) {
-    const store = {};
+app.get("/", function(req, res, next) {
+    const initialState = {};
+    const store = configureStore(initialState);
     const context = {};
 
     const html = renderToString(
@@ -24,13 +28,19 @@ app.get("/", function(req, res) {
         />
     )
 
-    readFile(resolve(__dirname, 'index.html'), 'utf8', function (err, file) {
+    res.send(template({
+        body: html,
+        title: "awesomo"
+    }));
+
+
+    /*readFile(resolve(__dirname, 'index.html'), 'utf8', function (err, file) {
         if (err) return next(err);
 
         const document = file.replace('<div id="app"></div>', `<div id="app" class="theBewOne">${html}</div>`)
 
         res.status(200).send(document);
-    })
+    })*/
 })
 
 const PORT = 3000;
