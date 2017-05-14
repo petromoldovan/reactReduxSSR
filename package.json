@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --history-api-fallback"
+    "start": "webpack-dev-server --hot --history-api-fallback",
+    "server": "nodemon server.jsx --exec babel-node --presets es2015,stage-2,react"
   },
   "author": "pm",
   "license": "ISC",
@@ -18,13 +19,19 @@
     "jquery": "2.2.1",
     "jsdom": "8.1.0",
     "mocha": "2.4.5",
+    "nodemon": "^1.11.0",
     "react-addons-test-utils": "0.14.7",
     "webpack": "1.12.9",
     "webpack-dev-server": "1.14.0"
   },
   "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-node6": "^11.0.0",
     "babel-preset-stage-1": "6.1.18",
+    "babel-register": "^6.24.1",
     "css-loader": "0.28.1",
+    "express": "^4.15.2",
     "immutable": "3.8.1",
     "lodash": "3.10.1",
     "react": "15.5.4",

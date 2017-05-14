@@ -1,6 +1,6 @@
 import React from 'react';
 
-class App extends React.Component {
+class Landing extends React.Component {
     componentDidMount() {
         const {testFlight} = this.props;
 
@@ -21,4 +21,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default Landing;
