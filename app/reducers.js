@@ -2,6 +2,7 @@ import { fromJS } from 'immutable';
 
 import constants from './constants';
 
+
 function getInitialState() {
     return fromJS({})
 }

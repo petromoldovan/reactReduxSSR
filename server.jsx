@@ -1,10 +1,10 @@
 import express from 'express';
 const app = express();
-import router from './app/router/Router';
+import Router from './app/router/Router';
 
 
 app.use(express.static("public"))
-app.use(router);
+app.use(Router);
 
 const PORT = 3000;
 app.listen(PORT, function() {
