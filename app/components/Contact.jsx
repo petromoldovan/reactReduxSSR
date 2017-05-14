@@ -1,10 +1,20 @@
 import React from 'react';
 
+import Header from './common/Header';
+
+
 class Contact extends React.Component {
+    componentDidMount() {
+        const {loadContactTest} = this.props;
+
+        if (loadContactTest && loadContactTest instanceof Function) loadContactTest();
+    }
+
     render() {
         return (
             <div>
-                This is Contact
+                <Header />
+                <p>This is Contact</p>
             </div>
         );
     }

@@ -1,9 +1,16 @@
 import constants from '../constants';
 
 
-export function testFlight() {
+export function loadLandingTest() {
     return {
-        type: constants.TEXT_ACTION,
-        payload: "works"
+        type: constants.LANDING_LOADED,
+        payload: "landing"
+    }
+}
+
+export function loadContactTest() {
+    return {
+        type: constants.CONTACT_LOADED,
+        payload: "contact"
     }
 }

@@ -4,14 +4,11 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
-import {
-    BrowserRouter as Router,
-    Route
-} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
-import coreReducer from './reducers';
-import App from './containers/App';
-import Contact from './containers/Contact';
+import coreReducer from '../reducers';
+import Landing from '../containers/Landing';
+import Contact from '../containers/Contact';
 
 const loggerMiddleware = createLogger({
     stateTransformer: state => state.toJS()
@@ -23,7 +20,7 @@ ReactDOM.render(
     <Provider store={store}>
         <Router>
             <div>
-                <Route exact path="/" component={App} />
+                <Route exact path="/" component={Landing} />
                 <Route exact path="/contact" component={Contact} />
             </div>
         </Router>

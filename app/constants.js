@@ -1,5 +1,6 @@
 const constants = {
-    TEXT_ACTION: 'TEXT_ACTION',
+    LANDING_LOADED: 'LANDING_LOADED',
+    CONTACT_LOADED: 'CONTACT_LOADED',
 };
 
 
