@@ -4,20 +4,20 @@ import Header from './Header';
 
 class Landing extends React.Component {
     componentDidMount() {
-        const {testFlight} = this.props;
+        const {loadLandingTest} = this.props;
 
-        if (testFlight && testFlight instanceof Function) testFlight();
+        if (loadLandingTest && loadLandingTest instanceof Function) loadLandingTest();
     }
 
     onButtonClick = () => {
-        alert("yeaaaaah")
+        alert("fire")
     }
 
     render() {
         return (
             <div >
                 <Header />
-                Works well
+                <p>Landing page</p>
                 <button onClick={()=>this.onButtonClick()}>click me</button>
             </div>
         );

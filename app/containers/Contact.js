@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom'
 
+import {loadContactTest} from '../actions/state';
 import Contact from '../components/Contact';
 
 
@@ -9,7 +10,9 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return {};
+    return {
+        loadContactTest: () => dispatch(loadContactTest())
+    };
 }
 
 const ContactCont = connect(

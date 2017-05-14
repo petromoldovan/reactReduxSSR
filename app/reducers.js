@@ -1,4 +1,4 @@
-import { fromJS, List, Map } from 'immutable';
+import { fromJS } from 'immutable';
 
 import constants from './constants';
 
@@ -7,14 +7,17 @@ function getInitialState() {
 }
 
 function testFlight(state, action) {
-    return state.setIn(["data", "test"], action.payload);
+  return state.setIn(["data", "location"], action.payload);
 }
 
 function coreReducer(state = getInitialState(), action) {
     let newState;
 
     switch (action.type) {
-        case constants.TEXT_ACTION:
+        case constants.LANDING_LOADED:
+          newState = testFlight(state, action);
+          break;
+        case constants.CONTACT_LOADED:
           newState = testFlight(state, action);
           break;
         default:
