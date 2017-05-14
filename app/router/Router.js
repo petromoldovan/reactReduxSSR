@@ -23,7 +23,7 @@ router.get("*", function(req, res) {
     )
 
     readFile(resolve(__dirname, '../../index.html'), 'utf8', function (err, file) {
-        if (err) return res.status(500).send({error: err});
+        if (err) return res.status(404).send({error: err});
         const document = file.replace('<div id="app"></div>', `<div id="app">${html}</div>`)
         res.status(200).send(document);
     })
