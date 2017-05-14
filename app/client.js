@@ -10,7 +10,8 @@ import {
 } from 'react-router-dom'
 
 import coreReducer from './reducers';
-import App from './containers/App';
+//import App from './containers/App';
+import Landing from './components/Landing';
 import Contact from './containers/Contact';
 
 const loggerMiddleware = createLogger({
@@ -23,7 +24,7 @@ ReactDOM.render(
     <Provider store={store}>
         <Router>
             <div>
-                <Route exact path="/" component={App} />
+                <Route exact path="/" component={Landing} />
                 <Route exact path="/contact" component={Contact} />
             </div>
         </Router>
