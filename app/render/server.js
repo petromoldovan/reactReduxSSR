@@ -5,6 +5,17 @@ import Landing from '../containers/Landing';
 import Contact from '../containers/Contact';
 
 
+const routes = [
+    {
+        path:"/",
+        component: Landing
+    },
+    {
+        path:"/contact",
+        component: Contact
+    },
+]
+
 export default ({location, context, store}) => {
     return (
         <Provider store={store}>
@@ -14,8 +25,9 @@ export default ({location, context, store}) => {
             >
                 <div>
                     <Switch>
-                        <Route exact path="/" component={Landing} />
-                        <Route path="/contact" component={Contact}/>
+                        {routes.map(route => (
+                            <Route {...route} key={route.path} />
+                        ))}
                     </Switch>
                 </div>
             </StaticRouter>
